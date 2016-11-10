@@ -3,12 +3,10 @@ Wayback Machine (Archive.org) API wrapper.
 
 Info: https://archive.org/help/wayback_api.php
 
-
-# Installation
+## Installation
 > composer require f2face/wayback-machine
 
-
-# Usage Example
+## Usage Example
 ~~~~
 use f2face\WaybackMachine;
 
