@@ -15,11 +15,11 @@ class WaybackMachine
     private $endpoint = 'https://archive.org/wayback';
     
     /**
+     * Check website archive availability.
      * 
+     * @param string|array $arg
      * 
-     * @param <type> $arg 
-     * 
-     * @return <type>
+     * @return object
      */
     public function available($arg) {
         $url = $this->endpoint . '/available?';
