@@ -1,4 +1,13 @@
 <?php
+
+/**
+ *	Wayback Machine (Archive.org) API wrapper
+ *
+ *	f2face <f2face@f2face.com>
+ *	2016
+ *
+ */
+
 namespace f2face;
 
 class WaybackMachine
