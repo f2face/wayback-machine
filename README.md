@@ -5,7 +5,7 @@ Info: https://archive.org/help/wayback_api.php
 
 
 # Installation
-> composer require f2face/waybcak-machine
+> composer require f2face/wayback-machine
 
 
 # Usage Example
