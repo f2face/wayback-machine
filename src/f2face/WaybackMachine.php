@@ -119,6 +119,9 @@ class WaybackMachine
         $out = array();
         
         foreach ($array as $key => $value) {
+            if (!is_string($key))
+                throw new \Exception('The options array key must be a string.');
+            
             $out[constant($key)] = $value;
         }
         
