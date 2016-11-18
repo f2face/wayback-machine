@@ -86,7 +86,6 @@ class WaybackMachine
             throw new \Exception('Invalid URL.');
         
         $a = curl_init();
-        curl_setopt_array($a, $this->mapCurlOptArray($opt));
         curl_setopt($a, CURLOPT_URL, $url);
         curl_setopt($a, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($a, CURLOPT_RETURNTRANSFER, true);
@@ -94,6 +93,7 @@ class WaybackMachine
             curl_setopt($a, CURLOPT_HEADER, true);
             curl_setopt($a, CURLOPT_VERBOSE, true);
         }
+        curl_setopt_array($a, $this->mapCurlOptArray($opt));
         
         $out = curl_exec($a);
         
