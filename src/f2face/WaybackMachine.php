@@ -76,7 +76,7 @@ class WaybackMachine
             'CURLOPT_SSL_VERIFYHOST' => false,
             'CURLOPT_CONNECTTIMEOUT' => 60,
             'CURLOPT_TIMEOUT' => 60,
-            'CURLOPT_USERAGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36',
+            'CURLOPT_USERAGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
         );
         
         if (!empty($options) && is_array($options))
@@ -91,7 +91,6 @@ class WaybackMachine
         curl_setopt($a, CURLOPT_RETURNTRANSFER, true);
         if ($headers_only) {
             curl_setopt($a, CURLOPT_HEADER, true);
-            curl_setopt($a, CURLOPT_VERBOSE, true);
         }
         curl_setopt_array($a, $this->mapCurlOptArray($opt));
         
