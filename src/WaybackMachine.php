@@ -8,7 +8,7 @@
  *
  */
 
-namespace f2face;
+namespace f2face\WaybackMachine;
 
 class WaybackMachine
 {

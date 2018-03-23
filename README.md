@@ -12,6 +12,8 @@ Info: https://archive.org/help/wayback_api.php
 
 ## Usage Example
 ~~~~
+require_once __DIR__.'/vendor/autoload.php';
+
 use f2face\WaybackMachine;
 
 // Initialize
