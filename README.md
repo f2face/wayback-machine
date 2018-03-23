@@ -14,7 +14,7 @@ Info: https://archive.org/help/wayback_api.php
 ~~~~
 require_once __DIR__.'/vendor/autoload.php';
 
-use f2face\WaybackMachine;
+use f2face\WaybackMachine\WaybackMachine;
 
 // Initialize
 $wb = new WaybackMachine();
