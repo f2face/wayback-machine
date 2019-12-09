@@ -55,8 +55,19 @@ class WaybackMachine
         
         $data = $this->getUrl($url, array(), true);
         
-        if (!array_key_exists('content-location', $data))
-            throw new \Exception('An error occured. Page saving failed.');
+        if (!array_key_exists('content-location', $data)) {
+            $errorNum = 0;
+            
+            if (isset($data['http_code'])) {
+                preg_match("/ (\d{3}) /", $data['http_code'], $matches);
+                
+                if (sizeof($matches) == 2) {
+                    $errorNum = (int)$matches[1];
+                }
+            }
+
+            throw new \Exception('Page saving failed: ' . json_encode($data), $errorNum);
+        }    
         
         return 'https://web.archive.org' . $data['content-location'];
     }
